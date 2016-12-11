@@ -99,7 +99,7 @@ ul
 	float: left;
 	width: 50%;
 	height: 100%;
-	background-color: rgba(241, 196, 15,.85);
+	background-color: rgba(241, 196, 15,.75);
 }
 
 .col-right
@@ -108,7 +108,7 @@ ul
 	float: right;
 	width: 50%;
 	height: 100%;
-	background-color: rgba(239,239,239,.85);
+	background-color: rgba(239,239,239,.75);
 }
 
 .col-right a:hover
