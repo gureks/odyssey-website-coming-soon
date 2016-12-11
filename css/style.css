@@ -104,17 +104,12 @@ ul
 
 .col-right
 {
-	position: ;
+	position: relative;
 	display: table;
 	float: right;
 	width: 50%;
 	height: 100%;
-	background-color: rgba(239,239,239,.75);
-}
-
-.col-right a:hover
-{
-	color: rgba(241, 196, 15,1);
+	background-color: rgba(239,239,239,.5);
 }
 
 .middle
