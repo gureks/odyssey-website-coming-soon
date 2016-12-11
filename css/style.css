@@ -379,20 +379,20 @@ label
 
 	.col-left
 	{
-		position: fixed;
+		position: inherit;
+
 		display: table;
 		width: 100%;
-		height: 50%;
+		height: auto;
 		background-color: rgba(241, 196, 15,.75);
 	}
 
 	.col-right
 	{
-		position: fixed;
-		bottom: 0px;
+		position: inherit;
 		display: table;
 		width: 100%;
-		height: 40%;
+		height: auto;
 		background-color: transparent;
 	}
 }
