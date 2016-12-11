@@ -265,66 +265,7 @@ ul
 	}
 }
 
-@media (max-width: 900px)
-{
-	.navigation
-	{
-		display: none;
-	}
-
-	.col-left
-	{
-		position: static;
-
-		float: none;
-
-		width: 100%;
-		height: auto;
-		padding-top: 50px;
-		padding-bottom: 40px;
-	}
-
-	.col-right
-	{
-		float: none;
-
-		width: 100%;
-		height: auto;
-		padding-top: 50px;
-	}
-
-	.section-close
-	{
-		display: none;
-	}
-
-	.tab-content > .tab-pane
-	{
-		display: block;
-	}
-
-	.fade
-	{
-		opacity: 1;
-	}
-}
-
-@media (max-width: 768px)
-{
-	.newsletter_email
-	{
-		min-width: auto;
-	}
-
-	.btn-main
-	{
-		display: block;
-
-		width: 100%;
-	}
-}
-
-@media (max-width: 480px)
+@media (max-width: 720px)
 {
 	.counter ul
 	{
@@ -348,5 +289,10 @@ ul
 		font-size: 40px;
 
 		margin-left: 25px;
+	}
+
+	.section-left .fa
+	{
+		font-size: 15px;
 	}
 }
