@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="@gureks">
+	<title>Odyssey'17 - Coming Soon</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome/css/font-awesome.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700%7CRoboto:300,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+	<div class="loader"></div>
+	<div id="particles-js"></div>
+	<div class="col-left">
+		<div class="middle">
+			<div class="inner">
+				<section class="section section-left">
+					<h1>We're coming soon.</h1>
+					<p>We are at present taking a shot on a fresh site and won't take long. Please don’t forget to subscribe to be notified!</p>
+					<div class="counter">
+						<ul>
+							<li><span id="cday">00</span>/days</li>
+							<li><span id="chours">00</span>/hours</li>
+							<li><span id="cminutes">00</span>/minutes</li>
+							<li><span id="cseconds">00</span>/seconds</li>
+						</ul>
+					</div>
+					<ul class="social-icon">
+                        <li><a href="https://www.facebook.com/odyssey.iiitd"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/IIITDOdyssey"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://plus.google.com/104513383791254663029"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="https://www.instagram.com/iiitdodyssey/"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="mailto:odyssey@iiitd.ac.in"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-right">
+		<div class="middle">
+			<div class="inner">
+				<section class="section section-right">
+					<h2>Subscribe Now</h2>
+					<p>Submit your email and we will notify you when we are ready!</p>
+					<form id="newsletter-form" class="subscribe-form form-inline" method="POST" action="{{ url_for('subscribe') }}">
+						<div class="form-group">
+							<label class="sr-only" for="subscribe-email">Your Email:</label>
+							<input type="email" id="subscribe-email" name="subscribe-email" class="form-control subscribe-email" placeholder="Email" required> 
+						</div>
+						<button type="submit" class="btn btn-main">Send</button>
+						<div class="alert-message">
+							{% if alert %}
+								<div class="alert alert-success alert-dismissible">
+									<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+									{{alert}}
+								</div>
+							{% endif %}
+						</div>
+					</form> 
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<script src="{{ url_for('static', filename='js/particles.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.countdown.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
