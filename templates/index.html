@@ -8,11 +8,10 @@
 	<title>Odyssey'17 - Coming Soon</title>
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome/css/font-awesome.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-	
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700%7CRoboto:300,700' rel='stylesheet' type='text/css'>
-
+	{% assets "minified-css" %}
+	<link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">	
+	{% endassets %}
 </head>
 <body>
 
@@ -72,12 +71,10 @@
 
 	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 	<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
 	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-	<script src="{{ url_for('static', filename='js/particles.js') }}"></script>
-	<script src="{{ url_for('static', filename='js/jquery.countdown.js') }}"></script>
-	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
-
+	{% assets "minified-js" %}
+	<script src="{{ ASSET_URL }}"></script>
+	{% endassets %}
 </body>
 </html>

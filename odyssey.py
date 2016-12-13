@@ -1,8 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for
+from flask_assets import Bundle, Environment
 import os
 
 app = Flask('__name__')
 app.config['SECRET_KEY'] = os.urandom(20)
+
+assets = Environment(app)
+js = Bundle('js/jquery.countdown.js','js/particles.js','js/main.js', output='js/generate/minified.js', filters='jsmin')
+css = Bundle('css/style.css','css/font-awesome/css/font-awesome.css', output='css/generate/minified.css', filters='cssmin')
+assets.register("minified-js", js)
+assets.register("minified-css", css)
 
 @app.route('/')
 def index():
